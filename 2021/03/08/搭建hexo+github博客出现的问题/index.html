@@ -11,7 +11,7 @@
 
     <title>
         
-        Tags - CodeBear Personal Blog
+        搭建hexo+github博客出现的问题 - CodeBear Personal Blog
         
     </title>
 
@@ -63,7 +63,7 @@
                     <span>主页</span>
                 </a>
             </li>
-            <li  class=active >
+            <li >
                 <a href="/tags">
                     <i class="iconfont icon-biaoqian1"></i>
                     <span>标签</span>
@@ -92,6 +92,10 @@
         </ul>
     </div>
     
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E6%90%AD%E5%BB%BAhexo-github%E5%8D%9A%E5%AE%A2%E6%AD%A5%E9%AA%A4"><span class="toc-text">1、搭建hexo+github博客步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81favicon-ico%E4%B8%8D%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98"><span class="toc-text">2、favicon.ico不显示问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E5%A6%82%E4%BD%95%E5%8F%91%E5%B8%83%E5%8D%9A%E5%AE%A2%E9%97%AE%E9%A2%98"><span class="toc-text">3、如何发布博客问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E5%9B%BE%E7%89%87%E5%8A%A0%E8%BD%BD%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98"><span class="toc-text">4、图片加载失败问题</span></a></li></ol>
+</div>
+    
 </div>
 
 
@@ -115,64 +119,57 @@
     
     <div class="index-middle">
         <!-- Main Content -->
-        <div id='tag_cloud' class="tags">
-    
-    <a href="#hexo" title="hexo" rel="3">hexo</a>
-    
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        搭建hexo+github博客出现的问题
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2021-03-08 15:43:23</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#hexo" title="hexo">hexo</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <!-- # 搭建hexo+github博客出现的问题 -->
+
+
+
+<h2 id="1、搭建hexo-github博客步骤"><a href="#1、搭建hexo-github博客步骤" class="headerlink" title="1、搭建hexo+github博客步骤"></a>1、搭建hexo+github博客步骤</h2><p>具体步骤参见<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/26625249">这里</a></p>
+<p>按照这里搭建博客，能解决大部分问题。剩下一些细节性的问题需要自己解决。</p>
+<h2 id="2、favicon-ico不显示问题"><a href="#2、favicon-ico不显示问题" class="headerlink" title="2、favicon.ico不显示问题"></a>2、favicon.ico不显示问题</h2><p>解决方法：清理浏览器缓存。</p>
+<h2 id="3、如何发布博客问题"><a href="#3、如何发布博客问题" class="headerlink" title="3、如何发布博客问题"></a>3、如何发布博客问题</h2><p>我的主题是aircloud，可以直接在blog\source_posts文件夹里添加.md文件即可。例如：</p>
+<!-- ![image-20210308162155775](搭建hexo+github博客出现的问题/image-20210308162155775.png) -->
+<img src="/2021/03/08/%E6%90%AD%E5%BB%BAhexo+github%E5%8D%9A%E5%AE%A2%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98/image-20210308162155775.png" width="300px" height="400px">
+
+<h2 id="4、图片加载失败问题"><a href="#4、图片加载失败问题" class="headerlink" title="4、图片加载失败问题"></a>4、图片加载失败问题</h2><p>参见<a target="_blank" rel="noopener" href="https://www.cnblogs.com/codecheng99/p/12380799.html">这里</a></p>
+<p>要注意的是，一定要在_posts文件夹中建立与.md文件<strong>同名</strong>的文件夹来存放图片。例如：</p>
+<img src="/2021/03/08/%E6%90%AD%E5%BB%BAhexo+github%E5%8D%9A%E5%AE%A2%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98/image-20210308161203847.png" width="300px" height="400px">
+<!-- ![image-20210308161203847](搭建hexo+github博客出现的问题/image-20210308161203847.png) -->
+
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
 </div>
-
-<!-- 标签列表 -->
-
-
-<div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="hexo">
-                    <span class="tag-text">hexo</span>
-                </span>
-    
-    <!-- <li class="listing-item">
-    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-    </li> -->
-    <div class="post-preview">
-        <a href="/2021/03/06/hello-world/">
-            <h2 class="post-title">
-                Hello World
-            </h2>
-            
-        </a>
-        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-    </div>
-    
-    <!-- <li class="listing-item">
-    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-    </li> -->
-    <div class="post-preview">
-        <a href="/2021/03/08/hexo中图片无法加载问题/">
-            <h2 class="post-title">
-                hexo中图片无法加载问题
-            </h2>
-            
-        </a>
-        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-    </div>
-    
-    <!-- <li class="listing-item">
-    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-    </li> -->
-    <div class="post-preview">
-        <a href="/2021/03/08/搭建hexo+github博客出现的问题/">
-            <h2 class="post-title">
-                搭建hexo+github博客出现的问题
-            </h2>
-            
-        </a>
-        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-    </div>
-    
-</div>
-
 
     </div>
 </div>
@@ -250,7 +247,7 @@
     // We expose some of the variables needed by the front end
     window.hexo_search_path = "search.json"
     window.hexo_root = "/"
-    window.isPost = false
+    window.isPost = true
 </script>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 
