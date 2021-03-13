@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        常见的浏览器兼容性问题1 - CodeBear Personal Blog
+        
+    </title>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/aircloud.css">
+
+    
+<link rel="stylesheet" href="/css/gitment.css">
+
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> 饭可以一日不吃，觉可以一日不睡，书不可以一日不读。 </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar ">
+            <img src="/img/avatar.jpg" />
+        </div>
+        <div class="name">
+            <i>CodeBear</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E4%B8%8D%E5%90%8C%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E6%A0%87%E7%AD%BE%E9%BB%98%E8%AE%A4%E7%9A%84margin%E5%92%8Cpadding%E4%B8%8D%E5%90%8C"><span class="toc-text">1、不同浏览器的标签默认的margin和padding不同</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81cursor-hand-%E6%98%BE%E7%A4%BA%E6%89%8B%E5%9E%8B%E5%9C%A8safari-%E4%B8%8A%E4%B8%8D%E6%94%AF%E6%8C%81"><span class="toc-text">2、cursor:hand 显示手型在safari 上不支持</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E4%B8%A4%E4%B8%AA%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0%EF%BC%8C%E7%88%B6%E5%85%83%E7%B4%A0%E8%AE%BE%E7%BD%AE%E4%BA%86overflow-auto%EF%BC%9B%E5%AD%90%E5%85%83%E7%B4%A0%E8%AE%BE%E7%BD%AE%E4%BA%86position-relative-%E4%B8%94%E9%AB%98%E5%BA%A6%E5%A4%A7%E4%BA%8E%E7%88%B6%E5%85%83%E7%B4%A0%EF%BC%8C%E5%9C%A8IE6%E3%80%81IE7%E4%BC%9A%E8%A2%AB%E9%9A%90%E8%97%8F%E8%80%8C%E4%B8%8D%E6%98%AF%E6%BA%A2%E5%87%BA"><span class="toc-text">3、两个块级元素，父元素设置了overflow:auto；子元素设置了position:relative ;且高度大于父元素，在IE6、IE7会被隐藏而不是溢出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E5%9B%BE%E7%89%87%E9%BB%98%E8%AE%A4%E6%9C%89%E9%97%B4%E8%B7%9D"><span class="toc-text">4、图片默认有间距</span></a></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i> 饭可以一日不吃，觉可以一日不睡，书不可以一日不读。 </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        常见的浏览器兼容性问题1
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2021-03-13 22:08:06</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#web前端" title="web前端">web前端</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <h3 id="1、不同浏览器的标签默认的margin和padding不同"><a href="#1、不同浏览器的标签默认的margin和padding不同" class="headerlink" title="1、不同浏览器的标签默认的margin和padding不同"></a>1、不同浏览器的标签默认的margin和padding不同</h3><p>问题症状：随便写几个标签，不加样式控制的情况下，各自的margin 和padding差异较大。</p>
+<p>解决方案：可以使用Normalize.css来清除默认样式,或使用如下代码。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span>,<span class="selector-tag">h1</span>,<span class="selector-tag">h2</span>,<span class="selector-tag">h3</span>,<span class="selector-tag">ul</span>,<span class="selector-tag">li</span>,<span class="selector-tag">input</span>,<span class="selector-tag">div</span>,<span class="selector-tag">span</span>,<span class="selector-tag">a</span>,<span class="selector-tag">form</span> …… &#123; <span class="attribute">margin</span>:<span class="number">0</span>; <span class="attribute">padding</span>:<span class="number">0</span>; &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、cursor-hand-显示手型在safari-上不支持"><a href="#2、cursor-hand-显示手型在safari-上不支持" class="headerlink" title="2、cursor:hand 显示手型在safari 上不支持"></a>2、cursor:hand 显示手型在safari 上不支持</h3><p>解决方案：统一使用 cursor:pointer。</p>
+<h3 id="3、两个块级元素，父元素设置了overflow-auto；子元素设置了position-relative-且高度大于父元素，在IE6、IE7会被隐藏而不是溢出"><a href="#3、两个块级元素，父元素设置了overflow-auto；子元素设置了position-relative-且高度大于父元素，在IE6、IE7会被隐藏而不是溢出" class="headerlink" title="3、两个块级元素，父元素设置了overflow:auto；子元素设置了position:relative ;且高度大于父元素，在IE6、IE7会被隐藏而不是溢出"></a>3、两个块级元素，父元素设置了overflow:auto；子元素设置了position:relative ;且高度大于父元素，在IE6、IE7会被隐藏而不是溢出</h3><p>解决方案：父级元素设置position:relative。</p>
+<h3 id="4、图片默认有间距"><a href="#4、图片默认有间距" class="headerlink" title="4、图片默认有间距"></a>4、图片默认有间距</h3><p>解决方案：使用float 为img 布局</p>
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+        <li>
+            <a target="_blank" href="https://www.zhihu.com/people/ai-er-lan-xue-da">
+                            <span class="fa-stack fa-lg">
+                                 <i class="iconfont icon-zhihu"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+        <li>
+            <a target="_blank" href="http://weibo.com/3286578617">
+                            <span class="fa-stack fa-lg">
+                                  <i class="iconfont icon-weibo"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+        
+        <li>
+            <a target="_blank"  href="https://github.com/AirCloud">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span>/</span>
+        
+        <span><a target="_blank" rel="noopener" href="https://www.10000h.top">10000H</a></span>
+        <span>/</span>
+        
+        <span><a target="_blank" rel="noopener" href="https://niexiaotao.com">Xiaotao&#39;s Page</a></span>
+        <span>/</span>
+        
+        <span><a href="#">It helps SEO</a></span>
+        <span>/</span>
+        
+    </p>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>  Theme <a target="_blank" rel="noopener" href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="/js/index.js"></script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+</html>
