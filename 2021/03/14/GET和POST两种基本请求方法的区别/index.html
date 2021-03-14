@@ -11,7 +11,7 @@
 
     <title>
         
-        Promise的一道题 - CodeBear Personal Blog
+        GET和POST两种基本请求方法的区别 - CodeBear Personal Blog
         
     </title>
 
@@ -93,7 +93,7 @@
     </div>
     
         <div id="toc" class="toc-article">
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE-%E8%BE%93%E5%87%BA%E7%BB%93%E6%9E%9C%EF%BC%9F"><span class="toc-text">题目:输出结果？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AD%94%E6%A1%88%EF%BC%9A"><span class="toc-text">答案：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E5%9B%A0%EF%BC%9A"><span class="toc-text">原因：</span></a></li></ol>
+    
 </div>
     
 </div>
@@ -124,11 +124,11 @@
 
 <div class="post-container">
     <div class="post-title">
-        Promise的一道题
+        GET和POST两种基本请求方法的区别
     </div>
 
     <div class="post-meta">
-        <span class="attr">发布于：<span>2021-03-11 23:35:25</span></span>
+        <span class="attr">发布于：<span>2021-03-14 21:11:27</span></span>
         
         <span class="attr">标签：/
         
@@ -142,11 +142,19 @@
 </span>
     </div>
     <div class="post-content ">
-        <h2 id="题目-输出结果？"><a href="#题目-输出结果？" class="headerlink" title="题目:输出结果？"></a>题目:输出结果？</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Promise</span>.resolve().then(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Promise</span>.resolve(<span class="number">4</span>);</span><br><span class="line">&#125;).then(<span class="function">(<span class="params">res</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(res);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="built_in">Promise</span>.resolve().then(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">1</span>);</span><br><span class="line">&#125;).then(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">2</span>);</span><br><span class="line">&#125;).then(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">3</span>);</span><br><span class="line">&#125;).then(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">5</span>);</span><br><span class="line">&#125;).then(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">6</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+        <ol>
+<li>GET在浏览器回退时是无害的，而POST会再次提交请求。</li>
+<li>GET产生的URL地址可以被<a target="_blank" rel="noopener" href="https://zhidao.baidu.com/question/310542327522637404.html">Bookmark</a>，而POST不可以。</li>
+<li>GET请求会被浏览器主动<a target="_blank" rel="noopener" href="https://www.yikaow.com/yikao/53414.html">cache</a>，而POST不会，除非手动设置。</li>
+<li>GET请求只能进行url编码，而POST支持多种编码方式。</li>
+<li>GET请求参数会被完整保留在浏览器历史记录里，而POST中的参数不会被保留。</li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/cuihongyu3503319/p/5892257.html">GET请求在URL中传送的参数是有长度限制的</a>，而POST没有。</li>
+<li>对参数的数据类型，GET只接受ASCII字符，而POST没有限制。</li>
+<li>GET比POST更不安全，因为参数直接暴露在URL上，所以不能用来传递敏感信息。</li>
+<li>GET参数通过URL传递，POST放在Request body中。</li>
+</ol>
+<p>具体可参见<a target="_blank" rel="noopener" href="https://www.cnblogs.com/logsharing/p/8448446.html">这里</a></p>
 
-<h2 id="答案："><a href="#答案：" class="headerlink" title="答案："></a>答案：<img src="/2021/03/11/Promise%E7%9A%84%E4%B8%80%E9%81%93%E9%A2%98/image-20210311224451565.png" class title="image-20210311224451565"></h2><img src="/2021/03/11/Promise%E7%9A%84%E4%B8%80%E9%81%93%E9%A2%98/image-20210311224523228.png" class title="image-20210311224523228">
-
-<h2 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：<img src="/2021/03/11/Promise%E7%9A%84%E4%B8%80%E9%81%93%E9%A2%98/image-20210311224551681.png" class title="image-20210311224551681"></h2>
         
         <br />
         <div id="comment-container">
