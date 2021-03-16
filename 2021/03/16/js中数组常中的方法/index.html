@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        js中数组常中的方法 - CodeBear Personal Blog
+        
+    </title>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/aircloud.css">
+
+    
+<link rel="stylesheet" href="/css/gitment.css">
+
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> 饭可以一日不吃，觉可以一日不睡，书不可以一日不读。 </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar ">
+            <img src="/img/avatar.jpg" />
+        </div>
+        <div class="name">
+            <i>CodeBear</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i> 饭可以一日不吃，觉可以一日不睡，书不可以一日不读。 </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        js中数组常中的方法
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2021-03-16 21:43:11</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#前端基础题" title="前端基础题">前端基础题</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <p>1、concat()</p>
+<p>连接两个或更多的数组，并返回结果</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line"><span class="keyword">var</span> arr2 = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]</span><br><span class="line">arr.concat(arr2)</span><br><span class="line"><span class="built_in">console</span>.log(arr)   <span class="comment">// [1,2,3,4,5,6]</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>2、join()</p>
+<p>把数组的所有元素放入一个字符串。元素通过指定的分隔符进行分隔</p>
+<p>参数可选，指定要使用的分隔符，如果省略则默认使用逗号作为分隔符</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">3</span>)</span><br><span class="line">arr[<span class="number">0</span>] = <span class="number">1</span></span><br><span class="line">arr[<span class="number">1</span>] = <span class="number">2</span></span><br><span class="line">arr[<span class="number">2</span>] = <span class="number">3</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(arr.join())   <span class="comment">//1,2,3</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>3、pop()</p>
+<p>删除并返回数组的最后一个元素</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fruits = [<span class="string">&quot;Banana&quot;</span>, <span class="string">&quot;Orange&quot;</span>, <span class="string">&quot;Apple&quot;</span>, <span class="string">&quot;Mango&quot;</span>];</span><br><span class="line">fruits.pop();</span><br><span class="line"><span class="built_in">console</span>.log(fruits)  <span class="comment">// [&quot;Banana&quot;,&quot;Orange&quot;,&quot;Apple&quot;]</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>4、push()</p>
+<p>向数组的末尾添加一个或更多元素，并返回新的长度</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fruits = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line">fruits.push(<span class="number">4</span>)</span><br><span class="line"><span class="built_in">console</span>.log(fruits )  <span class="comment">// [1,2,3,4]</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>5、shift()</p>
+<p>删除并返回数组的第一个元素。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fruits = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">fruits.shift()</span><br><span class="line"><span class="built_in">console</span>.log(fruits )  <span class="comment">// [2,3,4]</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>6、unshift()</p>
+<p>向数组的开头添加一个或更多元素，并返回新的长度。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fruits = [<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">fruits.unshift(<span class="number">1</span>)</span><br><span class="line"><span class="built_in">console</span>.log(fruits )  <span class="comment">// [1,2,3,4]</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>7、reverse()</p>
+<p>反转数组中元素的顺序</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fruits = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line">fruits.reverse()</span><br><span class="line"><span class="built_in">console</span>.log(fruits )  <span class="comment">// [4,3,2,1]</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>8、toString()</p>
+<p>把数组转换为字符串，并返回结果。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fruits = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line">fruits.toString()</span><br><span class="line"><span class="built_in">console</span>.log(fruits )  <span class="comment">//  1,2,3,4</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>9、splice()</p>
+<p>从数组中添加或删除元素。</p>
+<p>参数 :</p>
+<p>①index 规定从何处添加元素。</p>
+<p>②howmany 可选。规定应该删除多少元素。必须是数字，但可以是 “0”。</p>
+<p>③item1, …, itemX 可选。要添加到数组的新元素。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">    arr.splice(<span class="number">0</span>,<span class="number">1</span>)</span><br><span class="line">    <span class="built_in">console</span>.log(arr) <span class="comment">//  [2,3,4]</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>10、slice()</p>
+<p>选取数组的的一部分，并返回一个新数组。不会改变原数组。</p>
+<p>参数:</p>
+<p>①start 可选，规定从何处开始选取(数组下标)。</p>
+<p>②end 可选，规定从何处结束选取(数组下标)，结束位置不会被截取。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">    <span class="built_in">console</span>.log(arr.slice(<span class="number">1</span>,<span class="number">3</span>)) <span class="comment">// [2,3]</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>11、sort()</p>
+<p>对数组的元素进行排序。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">5</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">            arr.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>)</span>&#123;</span><br><span class="line">                <span class="keyword">return</span> a-b</span><br><span class="line">            &#125;)</span><br><span class="line">            <span class="built_in">window</span>.console.log(arr)</span><br><span class="line">            <span class="comment">// [1, 2, 3, 4, 5]</span></span><br><span class="line">            <span class="comment">//b-a则相反</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>12、from()</p>
+<p>通过给定的对象中创建一个数组。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = <span class="built_in">Array</span>.from(<span class="string">&quot;helloWord&quot;</span>)</span><br><span class="line"><span class="built_in">console</span>.log(arr)</span><br><span class="line"><span class="comment">// [&quot;h&quot;, &quot;e&quot;, &quot;l&quot;, &quot;l&quot;, &quot;o&quot;, &quot;W&quot;, &quot;o&quot;, &quot;r&quot;, &quot;d&quot;]</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>13、indexOf()</p>
+<p>搜索数组中的元素，并返回它所在的位置。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">5</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line"><span class="built_in">console</span>.log(arr.indexOf(<span class="number">1</span>))</span><br><span class="line"><span class="comment">// 2</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>14、includes()</p>
+<p>判断一个数组是否包含一个指定的值。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">5</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line"><span class="built_in">console</span>.log(arr.includes(<span class="number">1</span>))</span><br><span class="line"><span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(arr.includes(<span class="number">0</span>))</span><br><span class="line"><span class="comment">// false</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>15、isArray()</p>
+<p>判断对象是否为数组。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">5</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Array</span>.isArray(arr))</span><br><span class="line"><span class="comment">// true</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>16、entries()</p>
+<p>返回数组的可迭代对象。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">5</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">            arr.entries()</span><br><span class="line">            <span class="built_in">window</span>.console.log(arr)</span><br><span class="line"><span class="comment">// 0: 5</span></span><br><span class="line"><span class="comment">// 1: 2</span></span><br><span class="line"><span class="comment">// 2: 1</span></span><br><span class="line"><span class="comment">// 3: 3</span></span><br><span class="line"><span class="comment">// 4: 4</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>17、keys()</p>
+<p>返回数组的可迭代对象，包含原始数组的键(key)。</p>
+<p>18、valueOf()</p>
+<p>返回数组对象的原始值。</p>
+<p>valueOf() 方法返回 Array 对象的原始值。</p>
+<p>该原始值由 Array 对象派生的所有对象继承。</p>
+<p>valueOf() 方法通常由 JavaScript 在后台自动调用，并不显式地出现在代码中。</p>
+<p>19、every()</p>
+<p>检测数值元素的每个元素是否都符合条件。</p>
+<p>只有全部符合条件才会返回true，否则返回false</p>
+<p>可以用来做单选全部选中，然后全选选中的业务。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// every循环定义的临时数组</span></span><br><span class="line"><span class="comment">// every()方法,针对数组中的每一个元素进行比对</span></span><br><span class="line"><span class="comment">// 只要有一个元素比对结果为false则返回false</span></span><br><span class="line"><span class="comment">// 反之要所有的元素比对结果为true才为true</span></span><br><span class="line"><span class="keyword">let</span> result = tempArr.every(<span class="function"><span class="params">ele</span>=&gt;</span>&#123;</span><br><span class="line">  <span class="comment">// 对数组中每一项的选中状态比较  是否为选中状态 也就是true</span></span><br><span class="line">  <span class="keyword">return</span> ele.checked == <span class="literal">true</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 全选按钮的选中状态等于every方法返回的值</span></span><br><span class="line"><span class="comment">// 如果返回true说明商品全部选中 反之则说明有未选中的</span></span><br><span class="line"><span class="comment">// 所以可以直接让全选按钮的值等于every方法返回的数据</span></span><br><span class="line">state.shoppingCartCheckAll = result</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>20、find()</p>
+<p>返回符合传入测试（函数）条件的数组元素。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">5</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line"><span class="keyword">let</span> index = arr.find(<span class="function"><span class="params">item</span>=&gt;</span>item&lt;<span class="number">2</span>)</span><br><span class="line"><span class="built_in">console</span>.log(index)  <span class="comment">// 1</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>21、findIndex()</p>
+<p>返回符合传入测试（函数）条件的数组元素索引。</p>
+<p>可以用来对数组去重</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> index = state.shoppingCartItem.findIndex(<span class="function"><span class="params">ele</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> ele.id === item.id</span><br><span class="line">      &#125;)</span><br><span class="line">      <span class="comment">//如果购物车中存在商品则让这个商品数量加1</span></span><br><span class="line">      <span class="keyword">if</span> (index !== -<span class="number">1</span>) &#123;</span><br><span class="line">        state.shoppingCartItem[index].count += <span class="number">1</span>;</span><br><span class="line">          <span class="comment">//不存在商品则添加提交的商品</span></span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          <span class="comment">//定义商品选中状态</span></span><br><span class="line">        item.checked = <span class="literal">false</span></span><br><span class="line">        state.shoppingCartItem.push(item)</span><br><span class="line">      &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>22、forEach()</p>
+<p>数组每个元素都执行一次回调函数。</p>
+<p>可以对数组进行深拷贝,还可以添加一些判断条件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义一个临时数组</span></span><br><span class="line">      <span class="keyword">let</span> tempArr = []</span><br><span class="line">      <span class="comment">// 循环购物车数组，并且添加进定义的空数组</span></span><br><span class="line">      state.shoppingCartItem.forEach(<span class="function"><span class="params">ele</span>=&gt;</span>&#123;</span><br><span class="line">        tempArr.push(ele)</span><br><span class="line">      &#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>23、filter()</p>
+<p>检测数值元素，并返回符合条件所有元素的数组。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">5</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">            <span class="keyword">let</span> index = arr.filter(<span class="function"><span class="params">item</span>=&gt;</span>&#123;</span><br><span class="line">                <span class="keyword">return</span> item&gt;<span class="number">3</span></span><br><span class="line">            &#125;)</span><br><span class="line">            <span class="built_in">window</span>.console.log(index)</span><br><span class="line">            <span class="comment">// [5, 4]</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>24、map()</p>
+<p>通过指定函数处理数组的每个元素，并返回处理后的数组。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">5</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">arr.map(<span class="function"><span class="params">value</span>=&gt;</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> value*value</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//  [25, 4, 1, 9, 16]</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>25、some()</p>
+<p>检测数组元素中是否有元素符合指定条件。</p>
+<p>①如果有一个元素满足条件，则表达式返回true , 剩余的元素不会再执行检测。</p>
+<p>②如果没有满足条件的元素，则返回false。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">5</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line">    <span class="keyword">let</span> temp = arr.some(<span class="function">(<span class="params">value</span>) =&gt;</span> &#123;</span><br><span class="line">          <span class="keyword">return</span> value &gt; <span class="number">6</span></span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="built_in">window</span>.console.log(temp)</span><br><span class="line">    <span class="comment">//  false</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+        <li>
+            <a target="_blank" href="https://www.zhihu.com/people/ai-er-lan-xue-da">
+                            <span class="fa-stack fa-lg">
+                                 <i class="iconfont icon-zhihu"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+        <li>
+            <a target="_blank" href="http://weibo.com/3286578617">
+                            <span class="fa-stack fa-lg">
+                                  <i class="iconfont icon-weibo"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+        
+        <li>
+            <a target="_blank"  href="https://github.com/AirCloud">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span>/</span>
+        
+        <span><a target="_blank" rel="noopener" href="https://www.10000h.top">10000H</a></span>
+        <span>/</span>
+        
+        <span><a target="_blank" rel="noopener" href="https://niexiaotao.com">Xiaotao&#39;s Page</a></span>
+        <span>/</span>
+        
+        <span><a href="#">It helps SEO</a></span>
+        <span>/</span>
+        
+    </p>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>  Theme <a target="_blank" rel="noopener" href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="/js/index.js"></script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+</html>

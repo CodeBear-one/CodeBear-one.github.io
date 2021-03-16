@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        浏览器页面有哪三层构成，分别是什么，作用是什么? - CodeBear Personal Blog
+        
+    </title>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/aircloud.css">
+
+    
+<link rel="stylesheet" href="/css/gitment.css">
+
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> 饭可以一日不吃，觉可以一日不睡，书不可以一日不读。 </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar ">
+            <img src="/img/avatar.jpg" />
+        </div>
+        <div class="name">
+            <i>CodeBear</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i> 饭可以一日不吃，觉可以一日不睡，书不可以一日不读。 </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        浏览器页面有哪三层构成，分别是什么，作用是什么?
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2021-03-16 21:43:11</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#前端基础题" title="前端基础题">前端基础题</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <p>引与<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_41950078/article/details/84276664">这里</a></p>
+<p>构成：结构层、表示层、行为层</p>
+<p>分别是：HTML、CSS、JavajScript</p>
+<p>作用：HTML实现页面结构、CSS完成页面的表现与风格、JavaScript实现客户端的一些功能和业务</p>
+<p>1、网页的结构层（structural layer）由HTML或XHTML之类的标记语言负责创建，标签就是那些出现在尖括号里的单词，对网页的语义含义做出了描述，但这些标签不包含任何关于如何显示有关的信息，例如p标签表达了这样一种语义：“这是一段文本段”。之前页面布局都习惯采用div标签，这是一个没有任何语义的标签，现在页面制作都倾向于标签的语义化，可以使爬虫更容易捕获到网页信息。</p>
+<p>2、网页的表示层（presentation layer）由CSS负责创建、CSS对“如何显示有关内容”作了回答。</p>
+<p>3、网页的行为层（behavior layer）负责回答“内容应该如何对事件作出反应”这一问题。这是JavaScript语言和DOM主宰的领域。</p>
+<p>​    网页的表示层和行为层总是存在的，即使我们未明确地给出任何具体的指令也是如此。此时，Web浏览器将把它的默认样式和默认事件处理函数施加在网页的结构层上。例如，浏览器会在呈现“文本段”元素时留出页边距，有些浏览器会在用户把鼠标指针悬停在某个元素的上方时弹出一个显示着该元素的 title 属性值的提示框，等等。 分离在所有的产品设计活动中，选择最适用的工具去解决问题是最基本的原则。具体到网页设计工作。 使用 (X)HTML去搭建文档的结构。 使用 CSS 去设置文档的呈现效果。 使用DOM 脚本去实现文档的行为。   </p>
+<p>​    不过，在这三种技术之间存在着一些潜在的重叠区域，如：DOM技术可以用来改变网页的结构。在 CSS身上也可以找到这种技术相互重叠的例子。诸如 :hover 和 :focus 之类的预定义符号（伪class属性）使我们可以根据用户触发事件来改变呈现效果。改变元素的呈现效果当然是表示层的“势力范围”，但对用户触发事件做出反应却是行为层的领地。表示层和行为层的这种重叠形成了一个灰色地带。伪 class 属性是 CSS 正在深入 DOM 领地证据，但 DOM在这方面也不是毫无作为。我们完全可以利用 DOM 技术把样式信息施加在HTML 元素身上。分离的效果要做到即使去掉表示层和行为层，文档的内容也依然可以访问，因为“内容才是一切”。而且网页的行为层(javascript) 与其结构(XHTML) 是彼此互不干扰的，不能混杂在一起。还要给行为层“预留退路”，要考虑到如果你的用户禁用了Javascript会怎样？网页是否还可以正常运作。这些理论的东西是基本的思想，具体的大家要在不断的实践过程中去慢慢体会。总之，这三种技术就像是一个凳子的三条腿，要想成为一名技能全面的全栈Web 工程师，就必须熟练掌握这三种技术，并知道每种技术最适用于哪一类问题。</p>
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+        <li>
+            <a target="_blank" href="https://www.zhihu.com/people/ai-er-lan-xue-da">
+                            <span class="fa-stack fa-lg">
+                                 <i class="iconfont icon-zhihu"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+        <li>
+            <a target="_blank" href="http://weibo.com/3286578617">
+                            <span class="fa-stack fa-lg">
+                                  <i class="iconfont icon-weibo"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+        
+        <li>
+            <a target="_blank"  href="https://github.com/AirCloud">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span>/</span>
+        
+        <span><a target="_blank" rel="noopener" href="https://www.10000h.top">10000H</a></span>
+        <span>/</span>
+        
+        <span><a target="_blank" rel="noopener" href="https://niexiaotao.com">Xiaotao&#39;s Page</a></span>
+        <span>/</span>
+        
+        <span><a href="#">It helps SEO</a></span>
+        <span>/</span>
+        
+    </p>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>  Theme <a target="_blank" rel="noopener" href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="/js/index.js"></script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+</html>
