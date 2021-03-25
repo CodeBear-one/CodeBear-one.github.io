@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        ES6中的symbol类型 - CodeBear Personal Blog
+        
+    </title>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/aircloud.css">
+
+    
+<link rel="stylesheet" href="/css/gitment.css">
+
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> 饭可以一日不吃，觉可以一日不睡，书不可以一日不读。 </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar ">
+            <img src="/img/avatar.jpg" />
+        </div>
+        <div class="name">
+            <i>CodeBear</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95"><span class="toc-text">一、基本用法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-text">二、使用场景</span></a></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i> 饭可以一日不吃，觉可以一日不睡，书不可以一日不读。 </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        ES6中的symbol类型
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2021-03-25 20:56:41</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#前端基础题" title="前端基础题">前端基础题</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <p>引用于<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/f057e3ad6aab">这里</a></p>
+<p>symbol类型是es6新增的一个基本数据类型,表示独一无二的值，最大的用法是用来定义对象的唯一属性名</p>
+<h3 id="一、基本用法"><a href="#一、基本用法" class="headerlink" title="一、基本用法"></a>一、基本用法</h3><p>symbol不是一个构造函数，不能使用new来创建，与普通函数调用类似</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s1 = <span class="built_in">Symbol</span>();<span class="comment">//创建了一个symbol的实例</span></span><br><span class="line"><span class="built_in">console</span>.log(s1);<span class="comment">//Symbol()</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> s1);<span class="comment">//symbol</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>symbol可以传递一个字符串参数，参数作用是对symbol类型的描述，便于区分这个symbol是哪一个</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s1 = <span class="built_in">Symbol</span>(<span class="string">&quot;symbol&quot;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(s1);<span class="comment">//Symbol(symbol)</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> s1);<span class="comment">//symbol</span></span><br></pre></td></tr></table></figure>
+
+<p>symbol类型的值具有唯一性，是一个独一无二的值，每一个 Symbol 的值都不相等。相同参数 Symbol() 返回的值不相等</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s1 = <span class="built_in">Symbol</span>(<span class="string">&quot;symbol&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> s2 = <span class="built_in">Symbol</span>(<span class="string">&quot;symbol&quot;</span>);</span><br><span class="line"><span class="built_in">console</span>.dir(s1 == s2);<span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="二、使用场景"><a href="#二、使用场景" class="headerlink" title="二、使用场景"></a>二、使用场景</h3><p>用于对象中的属性</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//使用方式一</span></span><br><span class="line"><span class="keyword">var</span> n = <span class="built_in">Symbol</span>(<span class="string">&quot;uname&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> obj = &#123;&#125;;</span><br><span class="line">obj[n] = <span class="string">&quot;tom&quot;</span>;</span><br><span class="line"><span class="comment">//以symbol作为属性不能使用点运算符添加属性，用点来添加属性是添加常规字符串属性</span></span><br><span class="line"><span class="comment">//obj.n = &quot;tom&quot;;</span></span><br><span class="line"><span class="built_in">console</span>.log(obj);<span class="comment">//&#123;Symbol(uname): &quot;tom&quot;&#125;</span></span><br><span class="line"><span class="comment">//使用方式二</span></span><br><span class="line"><span class="keyword">var</span> n = <span class="built_in">Symbol</span>(<span class="string">&quot;uname&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    [n]:<span class="string">&quot;tom&quot;</span>  <span class="comment">//字面量添加symbol属性，必须要用[]</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(obj);<span class="comment">//&#123;Symbol(uname): &quot;tom&quot;&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>访问以上添加的symbol属性</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(obj[n]);<span class="comment">//tom</span></span><br><span class="line"><span class="built_in">console</span>.log(obj.n);<span class="comment">//undefined</span></span><br></pre></td></tr></table></figure>
+
+<p>如果对象下同时添加了与symbol同名的常规属性，则使用[]访问的是symbol属性，使用点运算符访问的是常规属性</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> n = <span class="built_in">Symbol</span>(<span class="string">&quot;uname&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> obj = &#123;&#125;;</span><br><span class="line">obj.n = <span class="string">&quot;jerry&quot;</span>;</span><br><span class="line">obj[n] = <span class="string">&quot;tom&quot;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(obj[n]);<span class="comment">//tom</span></span><br><span class="line"><span class="built_in">console</span>.log(obj.n);<span class="comment">//jerry</span></span><br></pre></td></tr></table></figure>
+
+<p>symbol类型的值具有唯一性，由于每一个 Symbol 的值都是不相等的，所以 Symbol 作为对象的属性名，可以保证属性不重名。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> n = <span class="built_in">Symbol</span>(<span class="string">&quot;uname&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> n2 = <span class="built_in">Symbol</span>(<span class="string">&quot;uname&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> obj1 = &#123;&#125;;</span><br><span class="line">obj1[n] = <span class="string">&quot;tom&quot;</span>;</span><br><span class="line">obj1[n2] = <span class="string">&quot;jerry&quot;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(obj1);<span class="comment">//&#123;Symbol(uname): &quot;tom&quot;, Symbol(uname): &quot;jerry&quot;&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>对象中的symbol属性不会被for in遍历</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> n = <span class="built_in">Symbol</span>(<span class="string">&quot;uname&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> obj = &#123;&#125;;</span><br><span class="line">obj[n] = <span class="string">&quot;tom&quot;</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> key <span class="keyword">in</span> obj)&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(obj[key]);<span class="comment">//无输出</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>对象中的symbol属性不会被 Object.keys(obj) 、Object.values(obj)、 Object.getOwnPropertyNames(obj) 返回。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> n = <span class="built_in">Symbol</span>(<span class="string">&quot;uname&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> obj = &#123;&#125;;</span><br><span class="line">obj[n] = <span class="string">&quot;tom&quot;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.keys(obj));<span class="comment">//[]</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.values(obj));<span class="comment">//[]</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.getOwnPropertyNames(obj));<span class="comment">//[]</span></span><br></pre></td></tr></table></figure>
+
+<p>可以通过 Object.getOwnPropertySymbols() 和 Reflect.ownKeys() 取到。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> n = <span class="built_in">Symbol</span>(<span class="string">&quot;uname&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> obj = &#123;&#125;;</span><br><span class="line">obj[n] = <span class="string">&quot;tom&quot;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Reflect</span>.ownKeys(obj));<span class="comment">//[Symbol(uname)]</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.getOwnPropertySymbols(obj));<span class="comment">//[Symbol(uname)]</span></span><br></pre></td></tr></table></figure>
+
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+        <li>
+            <a target="_blank" href="https://www.zhihu.com/people/ai-er-lan-xue-da">
+                            <span class="fa-stack fa-lg">
+                                 <i class="iconfont icon-zhihu"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+        <li>
+            <a target="_blank" href="http://weibo.com/3286578617">
+                            <span class="fa-stack fa-lg">
+                                  <i class="iconfont icon-weibo"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+        
+        <li>
+            <a target="_blank"  href="https://github.com/AirCloud">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span>/</span>
+        
+        <span><a target="_blank" rel="noopener" href="https://www.10000h.top">10000H</a></span>
+        <span>/</span>
+        
+        <span><a target="_blank" rel="noopener" href="https://niexiaotao.com">Xiaotao&#39;s Page</a></span>
+        <span>/</span>
+        
+        <span><a href="#">It helps SEO</a></span>
+        <span>/</span>
+        
+    </p>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>  Theme <a target="_blank" rel="noopener" href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="/js/index.js"></script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+</html>
